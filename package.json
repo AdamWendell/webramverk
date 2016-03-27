@@ -1,0 +1,23 @@
+{
+  "name": "webramverk",
+  "version": "0.0.1",
+  "description": "Homework exercises",
+  "main": "App.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamWendell/webramverk.git"
+  },
+  "author": "Adam Wendell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdamWendell/webramverk/issues"
+  },
+  "homepage": "https://github.com/AdamWendell/webramverk#readme",
+  "devDependencies": {
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
