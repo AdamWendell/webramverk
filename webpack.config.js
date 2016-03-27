@@ -2,19 +2,19 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './js/BrowserEntry.jsx',
+  entry: './app/App.jsx',
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js',
     publicPath: '/public/'
   },
-  resolve: {
+  resolve:
     extensions: ['', '.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: true
+    chunks: false
   },
   module: {
     preLoaders: [
