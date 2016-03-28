@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p --minimize -w",
     "dev": "webpack-dev-server --content-base public",
-    "gh": "git subtree split --prefix public -b gh-pages && git push -f origin gh-pages:gh-pages  "
+    "gh": "git subtree split --prefix public -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages "
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.2",
+    "babel-plugin-transform-function-bind": "^6.5.2",
     "babel-polyfill": "6.7.4",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
