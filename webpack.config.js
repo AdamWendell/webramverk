@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/public/'
   },
-  resolve:
+  resolve: {
     extensions: ['', '.js', '.jsx', '.json']
   },
   stats: {
@@ -17,17 +17,20 @@ module.exports = {
     chunks: false
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/
-      }
-    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.jsx?$/,
+    //     loader: 'eslint-loader',
+    //     exclude: /node_modules/
+    //   }
+    // ],
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
+        loaders: [
+          'babel-loader',
+          __dirname + '/lib/pre-loader'
+        ]
       },
       {
         test: /\.json$/,
