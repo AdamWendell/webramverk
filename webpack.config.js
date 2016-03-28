@@ -5,7 +5,7 @@ module.exports = {
   entry: './app/App.jsx',
   output: {
     path: path.join(__dirname, '/public/js/'),
-    filename: 'bundle.js',
+    filename: 'bundle.min.js',
     publicPath: '/public/'
   },
   resolve: {
