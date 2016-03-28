@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/public/js/'),
     filename: 'bundle.min.js',
-    publicPath: '/public/'
+    publicPath: path.join(__dirname, '/public/js/')
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
@@ -37,5 +37,9 @@ module.exports = {
         loader: 'json-loader'
       }
     ]
+  },
+  devServer: {
+    hot: true,
+    inline: true
   }
 }
