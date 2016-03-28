@@ -6,7 +6,7 @@ const App = () => {
   const exercises = [e1, e1]
   const style = {
     border: '2px solid black',
-    'padding-bottom': '15px'
+    'paddingBottom': '15px'
   }
   console.log(e1.solution)
   return (
