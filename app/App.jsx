@@ -5,9 +5,10 @@ import * as e2 from './e2.jsx'
 import * as e3 from './e3.jsx'
 import * as e4 from './e4.jsx'
 import * as e5 from './e5.jsx'
+import * as e6 from './e6.jsx'
 
 const App = () => {
-  const exercises = [e1, e2, e3, e4, e5]
+  const exercises = [e1, e2, e3, e4, e5, e6]
   const style = {
     border: '2px solid black',
     'paddingBottom': '15px'
