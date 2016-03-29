@@ -1,13 +1,22 @@
 import React from 'react'
 
 class solution extends React.Component {
-  clickMe(event) {
-    event.preventDefault()
-    console.log('You clicked the link!')
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      myVariable: 1
+    }
+  }
+  clicker () {
+    this.setState({myVariable: this.state.myVariable + 1})
   }
   render () {
     return (
-      <a onClick={this.clickMe} href='/'>Click me</a>
+      <div>
+        <p>{this.state.myVariable}</p>
+        <a onClick={::this.clicker} >Click me</a>
+      </div>
     )
   }
 }
@@ -15,14 +24,25 @@ class solution extends React.Component {
 const code = () => (
   /*eslint-disable*/
   <pre><code className='language-jsx'>
+    import React from 'react'
+
     class solution extends React.Component {
-      clickMe(event) {
-        event.preventDefault()
-        console.log('You clicked the link!')
+      constructor(props) {
+        super(props)
+
+        this.state = {
+          myVariable: 1
+        }
+      }
+      clicker () {
+        this.setState({myVariable: this.state.myVariable + 1})
       }
       render () {
         return (
-          <a onClick={this.clickMe} href='/'>Click me</a>
+          <div>
+            <p>{this.state.myVariable}</p>
+            <a onClick={::this.clicker} >Click me</a>
+          </div>
         )
       }
     }
