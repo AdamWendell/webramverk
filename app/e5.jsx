@@ -1,31 +1,18 @@
 import React from 'react'
 
-class solution extends React.Component {
-  clickMe(event) {
-    event.preventDefault()
-    console.log('You clicked the link!')
-  }
-  render () {
-    return (
-      <a onClick={this.clickMe} href='/'>Click me</a>
-    )
-  }
-}
+const TestingTesting = () =>  <p>TESTING TESTING!</p>
+
+const solution = () => <div><TestingTesting /></div>
+
 
 const code = () => (
   /*eslint-disable*/
   <pre><code className='language-jsx'>
-    class solution extends React.Component {
-      clickMe(event) {
-        event.preventDefault()
-        console.log('You clicked the link!')
-      }
-      render () {
-        return (
-          <a onClick={this.clickMe} href='/'>Click me</a>
-        )
-      }
-    }
+
+    const Testing = () =>  <p>TESTING TESTING!</p>
+
+    const solution = () => <div><Testing /></div>
+
   </code></pre>
   /*eslint-enable*/
 )
