@@ -5,7 +5,7 @@ class solution extends React.Component {
     super(props)
 
     this.state = {
-      myFirstVariable: 'First!'
+      myFirstVariable: 'First!!'
     }
   }
   render () {
