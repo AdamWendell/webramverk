@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p --minimize",
-    "dev": "webpack-dev-server --content-base public",
+    "dev": "webpack-dev-server --hot --inline --host 0.0.0.0 --content-base public",
     "gh": "git subtree split --prefix public -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages "
   },
   "repository": {
