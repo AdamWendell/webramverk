@@ -5,7 +5,7 @@ class solution extends React.Component {
     super(props)
 
     this.state = {
-      animals: ['elefant', 'gorilla', 'val', 'hund', 'skata', 'chimpans', 'älg']
+      animals: ['elefant', 'gorilla', 'val', 'hund', 'skata', 'chimpans']
     }
   }
   add () {

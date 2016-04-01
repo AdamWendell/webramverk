@@ -11,20 +11,48 @@ class solution extends React.Component {
         {animal:'val', checked: false},
         {animal:'hund', checked: false},
         {animal:'skata', checked: false},
-        {animal:'chimpans', checked: false}
+        {animal:'chimpans', checked: true}
       ]
     }
   }
   add () {
-    this.setState({animals: this.state.animals.concat('katt')})
+    this.setState({animals: this.state.animals.concat({animal: 'katt', checked: false})})
   }
+  compare(a, b) {
+  if ( a.animal < b.animal) {
+    return -1;
+  }
+  if (a.animal > b.animal) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+toggleChange (i) {
+    this.setState({
+      animals[i].checked = !this.state.isChecked // flip boolean value
+    })
+}
   // toggle checked
   render () {
     const animals = this.state.animals
     return (
       <div>
         <ul>
-          {animals.slice().sort().map((animalObj, i) => <li key={i}>{animalObj.animal}</li>)}
+          {animals
+            .filter((obj) => !obj.checked)
+            .sort(::this.compare)
+            .map((animalObj, i) => <li key={i}><input type='checkbox' checked={animalObj.checked}/>{animalObj.animal}</li>)
+          }
+          {animals
+            .filter((obj) => obj.checked)
+            .sort(::this.compare)
+            .map((animalObj, i) => <li key={i}>
+            <input
+              type='checkbox'
+              checked={animalObj.checked}
+              onChange={::this.toggleChange(i)}
+              />{animalObj.animal}</li>)}
         </ul>
         <a onClick={::this.add}>Add</a>
       </div>
