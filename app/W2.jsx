@@ -1,6 +1,6 @@
 import React from 'react'
 import * as e1 from './W2e1.jsx'
-import * as e2 from './W2e2.jsx'
+import * as e2 from './W2e8/W2e8'
 // import * as e3 from './W2e3.jsx'
 // import * as e4 from './W2e4.jsx'
 // import * as e5 from './W2e5.jsx'
