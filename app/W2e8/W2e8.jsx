@@ -1,5 +1,5 @@
 import React from 'react'
-import TableRow from './TableRow';
+import TableRow from './TableRow'
 
 class solution extends React.Component {
   constructor (props) {
@@ -12,43 +12,48 @@ class solution extends React.Component {
           license: 'abc123',
           brand: 'Volvo',
           model: 'v40',
-          year: '2016'
+          year: '2016',
+          edit: false
         },
         bil2: {
           license: 'bmw354',
           brand: 'BMW',
           model: 'M135 xdrive',
-          year: '2014'
+          year: '2014',
+          edit: false
         }
       }
     }
+    this.tabelRowRender = ::this.tabelRowRender
   }
   tabelRowRender (bil) {
+    console.log(this.state.bilar[bil])
     return <TableRow key={bil} bil={this.state.bilar[bil]}/>
   }
   render () {
     return (
       <table>
-        <tr>
-          <th>License</th>
-          <th>Brand</th>
-          <th>Model</th>
-          <th>Year</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>License</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
         {Object
           .keys(this.state.bilar)
-          .map(this.tabelRowRender)}
+          .map(this.tabelRowRender)
+        }
+        </tbody>
       </table>
     )
   }
 }
 
 const code = () => (
-  /*eslint-disable*/
-  <pre><code className='language-jsx'>
-
-  </code></pre>
-  /*eslint-enable*/
+  <div> Katt </div>
 )
 
 export {solution, code}
